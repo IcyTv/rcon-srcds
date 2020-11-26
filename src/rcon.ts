@@ -2,7 +2,7 @@ import { createConnection, Socket } from 'net'
 import protocol from './protocol'
 import * as packets from './packet'
 
-class RCON {
+export class RCON {
     host: string
     port: number
     maxPacketSize: number
@@ -191,12 +191,10 @@ class RCON {
     }
 }
 
-interface RCONOptions {
+export interface RCONOptions {
     host?: string
     port?: number
     maxPacketSize?: number
     encoding?: packets.EncodingOptions
     timeout?: number
 }
-
-export = RCON
